@@ -1,0 +1,14 @@
+<div class="container">
+    <div>
+        <h1>{{title}}</h1>
+            <div>
+                <ul class="list-group">
+                        <li [ngClass]="{'list-group-item': true, 
+                        'list-group-item-success': post.loveIts>0, 
+                        'list-group-item-danger': post.loveIts<0}"  *ngFor =" let post of posts" >
+                     <post-list-item-component [post]="post" [loveIts]="post.loveIts"></post-list-item-component>
+                 </li>
+                </ul>
+            </div>
+    </div>       
+</div>

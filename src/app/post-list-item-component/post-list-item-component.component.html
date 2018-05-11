@@ -1,0 +1,12 @@
+
+    <div>
+        <h3>{{post?.title}}</h3>            
+        <span class="badge" style="float: right;">
+            {{post?.created_at | date: 'short'}}
+        </span>
+    </div>
+     <div>        
+        <p>{{post?.content}}</p>
+        <button class="btn btn-success" (click)='onLoveIt()'>Like It</button>
+        <button class="ml-1 btn btn-danger" (click)='onDontLoveIt()'>Don't Like It</button>
+    </div>    
